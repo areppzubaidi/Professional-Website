@@ -103,7 +103,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Universiti Tenaga Nasional",
-      logo: require("./assets/images/harvardLogo.png"),
+      logo: require("./assets/images/uniten.png"),
       subHeader: "Bachelor in Information System",
       duration: "June 2011 - August 2015",
       
@@ -155,40 +155,41 @@ const workExperiences = {
     {
       role: "L2 Engineer",
       company: "Access World",
-      // companylogo: require("./assets/images/accessWorldLogo.png"),
+      companylogo: require("./assets/images/aw.png"), // Updated logo path
       date: "April 2022 – Present",
       desc: "Handling Level 2 support, network troubleshooting, and system administration tasks for internal teams and external clients."
     },
     {
       role: "IT Executive",
       company: "FPSO Ventures Sdn Bhd",
-      // companylogo: require("./assets/images/fpsoLogo.png"),
+      companylogo: require("./assets/images/fpso.png"), // Updated logo path
       date: "August 2020 – April 2022",
       desc: "Managed IT infrastructure, implemented security protocols, and ensured business continuity for offshore systems."
     },
     {
       role: "System Engineer",
       company: "Tata Consultancy Services",
-      // companylogo: require("./assets/images/tcsLogo.png"),
+      companylogo: require("./assets/images/tcs.png"), // Updated logo path
       date: "March 2018 – July 2020",
       desc: "Provided support for enterprise systems, deployed patches, and maintained server health for multiple clients."
     },
     {
       role: "Field Engineer",
       company: "NTT Data Services",
-      // companylogo: require("./assets/images/nttDataLogo.png"),
+      companylogo: require("./assets/images/ntt.png"), // Updated logo path
       date: "January 2017 – February 2018",
       desc: "Handled on-site troubleshooting, system setup, and client-side configurations for enterprise IT environments."
     },
     {
       role: "IT Helpdesk",
       company: "Hewlett Packard Enterprise",
-      // companylogo: require("./assets/images/hpeLogo.png"),
+      companylogo: require("./assets/images/hpe.png"), // Updated logo path
       date: "June 2015 – December 2016",
       desc: "Resolved user tickets, performed basic troubleshooting, and maintained IT support logs."
     }
   ]
 };
+
 
 
 

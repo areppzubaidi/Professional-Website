@@ -1,14 +1,15 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {illustration, contactInfo} from "../../portfolio";
-import {Fade} from "react-reveal";
+import { illustration, contactInfo } from "../../portfolio";
+import { Fade } from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Contact() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
@@ -24,6 +25,7 @@ export default function Contact() {
             >
               {contactInfo.subtitle}
             </p>
+
             <div
               className={
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"
@@ -33,7 +35,7 @@ export default function Contact() {
                 <>
                   <a
                     className="contact-detail"
-                    href={"tel:" + contactInfo.number}
+                    href={`tel:${contactInfo.number}`}
                   >
                     {contactInfo.number}
                   </a>
@@ -41,17 +43,29 @@ export default function Contact() {
                   <br />
                 </>
               )}
+
               <a
                 className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
+                href={`mailto:${contactInfo.email_address}`}
               >
                 {contactInfo.email_address}
               </a>
               <br />
               <br />
+
+              {contactInfo.openForOpportunities && (
+                <>
+                  <p className="contact-opportunities">
+                    Open for opportunities: {contactInfo.openForOpportunities}
+                  </p>
+                  <br />
+                </>
+              )}
+
               <SocialMedia />
             </div>
           </div>
+
           <div className="contact-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={email} />
@@ -59,7 +73,7 @@ export default function Contact() {
               <img
                 alt="Man working"
                 src={require("../../assets/images/contactMailDark.svg")}
-              ></img>
+              />
             )}
           </div>
         </div>

@@ -5,6 +5,11 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
+// Import your certification images
+import awsLogo from "./assets/images/awss.png";
+import itilLogo from "./assets/images/nttdata.png";
+import mbotLogo from "./assets/images/mbot.png";
+
 // Splash Screen
 
 const splashScreen = {
@@ -49,52 +54,48 @@ const skillsSection = {
   title: "What I do",
   subTitle: "PASSIONATE CLOUD & DEVOPS ENGINEER EXPLORING AUTOMATION AND INFRASTRUCTURE AS CODE",
   skills: [
-      emoji("⚡ Build and manage scalable cloud infrastructure using AWS, Azure, and Terraform"),
-      emoji("⚡ Automate CI/CD pipelines with tools like GitHub Actions, Jenkins, and GitLab CI"),
-      emoji("⚡ Containerization and orchestration using Docker and Kubernetes")
-    
+    emoji("⚡ Build and manage scalable cloud infrastructure using AWS, Azure, and Terraform"),
+    emoji("⚡ Automate CI/CD pipelines with tools like GitHub Actions, Jenkins, and GitLab CI"),
+    emoji("⚡ Containerization and orchestration using Docker and Kubernetes")
   ],
 
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
-  {
-    skillName: "aws",
-    fontAwesomeClassname: "fab fa-aws"
-  },
-  {
-    skillName: "linux",
-    fontAwesomeClassname: "fab fa-linux"
-  },
-  {
-    skillName: "docker",
-    fontAwesomeClassname: "fab fa-docker"
-  },
-  {
-    skillName: "kubernetes",
-    fontAwesomeClassname: "fas fa-network-wired" // Kubernetes doesn't have a FontAwesome icon, using alternative
-  },
-  {
-    skillName: "jenkins",
-    fontAwesomeClassname: "fas fa-jenkins" // Jenkins also has no official FA icon
-  },
-  {
-    skillName: "ansible",
-    fontAwesomeClassname: "fas fa-terminal" // No FA icon for Ansible, this is a generic replacement
-  },
-  {
-    skillName: "terraform",
-    fontAwesomeClassname: "fas fa-code-branch" // No FA icon, using a related symbol
-  },
-  {
-    skillName: "git",
-    fontAwesomeClassname: "fab fa-git-alt"
-  }
-]
-,
-  display: true // Set false to hide this section, defaults to true
-};
+    {
+      skillName: "aws",
+      fontAwesomeClassname: "fab fa-aws",
+    },
+    {
+      skillName: "linux",
+      fontAwesomeClassname: "fab fa-linux",
+    },
+    {
+      skillName: "docker",
+      fontAwesomeClassname: "fab fa-docker",
+    },
+    {
+      skillName: "kubernetes",
+      fontAwesomeClassname: "fas fa-cubes",  // generic container icon
+    },
+    {
+      skillName: "jenkins",
+      fontAwesomeClassname: "fas fa-cogs",  // generic automation icon
+    },
+    {
+      skillName: "ansible",
+      fontAwesomeClassname: "fas fa-terminal",
+    },
+    {
+      skillName: "terraform",
+      fontAwesomeClassname: "fas fa-code-branch",
+    },
+    {
+      skillName: "git",
+      fontAwesomeClassname: "fab fa-git-alt",
+    },
+  ],
+  display: true,  // <-- add comma here
+
+};  // <-- add this closing brace to close skillsSection object
 
 // Education Section
 
@@ -106,12 +107,10 @@ const educationInfo = {
       logo: require("./assets/images/uniten.png"),
       subHeader: "Bachelor in Information System",
       duration: "June 2011 - August 2015",
-      
-      
     },
-    
   ]
 };
+
 
 // Your top 3 proficient stacks/tech experience
 
@@ -214,32 +213,35 @@ const achievementSection = {
   achievementsCards: [
     {
       title: "AWS Certified Cloud Practitioner",
-      subtitle: "Earned foundational AWS certification, demonstrating understanding of cloud concepts, AWS services, and architecture best practices.",
-      image: null, // Replace with: require("./assets/images/awsLogo.png"),
+      subtitle:
+        "Earned foundational AWS certification, demonstrating understanding of cloud concepts, AWS services, and architecture best practices.",
+      image: awsLogo,
       imageAlt: "AWS Logo",
       footerLink: [
         {
           name: "View Certification",
-          url: "https://www.credly.com/" // Replace with your actual certification link
+          url: "https://www.credly.com/"
         }
       ]
     },
     {
       title: "ITIL v4 Foundation Certified",
-      subtitle: "Certified in ITIL v4 Foundation, demonstrating understanding of IT Service Management practices and principles.",
-      image: null, // Replace with: require("./assets/images/itilLogo.png"),
+      subtitle:
+        "Certified in ITIL v4 Foundation, demonstrating understanding of IT Service Management practices and principles.",
+      image: itilLogo,
       imageAlt: "ITIL Logo",
       footerLink: [
         {
           name: "View Certification",
-          url: "https://www.credly.com/" // Replace with your actual certification link
+          url: "https://www.credly.com/"
         }
       ]
     },
     {
       title: "MBOT Graduate Technologist",
-      subtitle: "Registered as a Graduate Technologist under the Malaysia Board of Technologists (MBOT).",
-      image: null, // Replace with: require("./assets/images/mbotLogo.png"),
+      subtitle:
+        "Registered as a Graduate Technologist under the Malaysia Board of Technologists (MBOT).",
+      image: mbotLogo,
       imageAlt: "MBOT Logo",
       footerLink: [
         {
@@ -251,6 +253,7 @@ const achievementSection = {
   ],
   display: true
 };
+
 
 
 // Blogs Section
@@ -279,8 +282,15 @@ const contactInfo = {
   subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+60108976406",
   email_address: "nurariffbinzubaidi@gmail.com",
-  openForOpportunities: "Yes"
+  openForOpportunities: "Open to new challenges and opportunities! Let's connect.",
+  // Add these display configurations
+  display: true, // Set to true to show this section
+  displayEmail: true, // Set to true to show email
+  displayPhone: true // Set to true to show phone number
 };
+
+
+
 
 
 

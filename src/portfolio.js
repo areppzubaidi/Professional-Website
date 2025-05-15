@@ -77,7 +77,7 @@ https://fontawesome.com/icons?d=gallery */
   },
   {
     skillName: "jenkins",
-    fontAwesomeClassname: "fas fa-cogs" // Jenkins also has no official FA icon
+    fontAwesomeClassname: "fas fa-jenkins" // Jenkins also has no official FA icon
   },
   {
     skillName: "ansible",
@@ -156,14 +156,14 @@ const workExperiences = {
       role: "L2 Engineer",
       company: "Access World",
       companylogo: require("./assets/images/aw.png"), // Updated logo path
-      date: "April 2022 – Present",
+      date: "August 2023 – Present",
       desc: "Handling Level 2 support, network troubleshooting, and system administration tasks for internal teams and external clients."
     },
     {
       role: "IT Executive",
       company: "FPSO Ventures Sdn Bhd",
       companylogo: require("./assets/images/fpso.png"), // Updated logo path
-      date: "August 2020 – April 2022",
+      date: "July 2022 – July 2023",
       desc: "Managed IT infrastructure, implemented security protocols, and ensured business continuity for offshore systems."
     },
     {
@@ -177,14 +177,14 @@ const workExperiences = {
       role: "Field Engineer",
       company: "NTT Data Services",
       companylogo: require("./assets/images/ntt.png"), // Updated logo path
-      date: "January 2017 – February 2018",
+      date: "November 2017 – February 2018",
       desc: "Handled on-site troubleshooting, system setup, and client-side configurations for enterprise IT environments."
     },
     {
       role: "IT Helpdesk",
       company: "Hewlett Packard Enterprise",
       companylogo: require("./assets/images/hpe.png"), // Updated logo path
-      date: "June 2015 – December 2016",
+      date: "October 2015 – June 2016",
       desc: "Resolved user tickets, performed basic troubleshooting, and maintained IT support logs."
     }
   ]

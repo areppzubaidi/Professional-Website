@@ -33,25 +33,19 @@ export default function Contact() {
             >
               {contactInfo.number && (
                 <>
-                  <a
-                    className="contact-detail"
-                    href={`tel:${contactInfo.number}`}
-                  >
-                    {contactInfo.number}
-                  </a>
-                  <br />
+                  <p className="contact-detail">{contactInfo.number}</p>
                   <br />
                 </>
               )}
 
-              <a
-                className="contact-detail-email"
-                href={`mailto:${contactInfo.email_address}`}
-              >
-                {contactInfo.email_address}
-              </a>
-              <br />
-              <br />
+              {contactInfo.email_address && (
+                <>
+                  <p className="contact-detail-email">
+                    {contactInfo.email_address}
+                  </p>
+                  <br />
+                </>
+              )}
 
               {contactInfo.openForOpportunities && (
                 <>

@@ -41,12 +41,14 @@
 }
 
 .education-roundedimg {
-  object-fit: cover;
+  object-fit: contain;       /* changed from cover */
   margin-right: 2rem;
   width: 6rem;
   height: 6rem;
   box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
-  border-radius: 50%;
+  border-radius: 12px;       /* changed from 50% circle to rounded rectangle */
+  background-color: white;   /* added to help transparent logos */
+  padding: 0.5rem;           /* added padding for spacing inside frame */
 }
 
 .education-card-right {
@@ -104,9 +106,12 @@
   }
   .education-roundedimg {
     width: 4rem;
-    height: 4rem;
+    height: auto;            /* changed to auto */
+    max-height: 4rem;
     margin-bottom: 0.5rem;
-    margin-right: 0px;
+    margin-right: 0;
+    border-radius: 8px;
+    padding: 0.25rem;
   }
 }
 
@@ -123,9 +128,14 @@
   .education-roundedimg {
     margin-top: 10px;
     width: 4rem;
-    height: 4rem;
+    height: auto;            /* changed to auto */
+    max-height: 60px;
     margin-bottom: 1rem;
     margin-right: 0;
+    display: block;          /* center image */
+    border-radius: 8px;
+    padding: 0.25rem;
+    background-color: white;
   }
   .education-text-bullets > ul {
     max-width: 80%;

@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Professional-Website/static/css/main.6ba84d9e.css",
+    "main.js": "/Professional-Website/static/js/main.6610560d.js",
+    "static/css/64.bba8fa55.chunk.css": "/Professional-Website/static/css/64.bba8fa55.chunk.css",
+    "static/js/64.56dc6704.chunk.js": "/Professional-Website/static/js/64.56dc6704.chunk.js",
+    "static/css/769.b3cbb36b.chunk.css": "/Professional-Website/static/css/769.b3cbb36b.chunk.css",
+    "static/js/769.c212992d.chunk.js": "/Professional-Website/static/js/769.c212992d.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/Professional-Website/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/Agustina.woff": "/Professional-Website/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/manOnTable.svg": "/Professional-Website/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/hpe.png": "/Professional-Website/static/media/hpe.159eddeb3b60ada44d9c.png",
+    "static/media/awss.png": "/Professional-Website/static/media/awss.316da603b6d42393e022.png",
+    "static/media/contactMailDark.svg": "/Professional-Website/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
+    "static/media/developerActivity.svg": "/Professional-Website/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
+    "static/media/nttdata.png": "/Professional-Website/static/media/nttdata.2ba64047e79051c3e952.png",
+    "static/media/aw.png": "/Professional-Website/static/media/aw.a6772f067f21a983ac72.png",
+    "static/media/ntt.png": "/Professional-Website/static/media/ntt.40a4906d4224ffc94888.png",
+    "static/media/mbot.png": "/Professional-Website/static/media/mbot.0e888416bcde6a19dc06.png",
+    "static/media/skill.svg": "/Professional-Website/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
+    "static/media/resume.pdf": "/Professional-Website/static/media/resume.f0f733dd3cd732b39262.pdf",
+    "index.html": "/Professional-Website/index.html",
+    "main.6ba84d9e.css.map": "/Professional-Website/static/css/main.6ba84d9e.css.map",
+    "main.6610560d.js.map": "/Professional-Website/static/js/main.6610560d.js.map",
+    "64.bba8fa55.chunk.css.map": "/Professional-Website/static/css/64.bba8fa55.chunk.css.map",
+    "64.56dc6704.chunk.js.map": "/Professional-Website/static/js/64.56dc6704.chunk.js.map",
+    "769.b3cbb36b.chunk.css.map": "/Professional-Website/static/css/769.b3cbb36b.chunk.css.map",
+    "769.c212992d.chunk.js.map": "/Professional-Website/static/js/769.c212992d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ba84d9e.css",
+    "static/js/main.6610560d.js"
+  ]
+}

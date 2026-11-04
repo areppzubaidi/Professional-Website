@@ -205,6 +205,22 @@ const bigProjects = {
   display: true,
 };
 
+
+// Highlight strip
+//
+// Four numbers, each of which a reader can verify against the platform itself. No invented metrics:
+// no "10x faster", no "99.99% uptime" -- the lab has no measured uptime and claiming one would be
+// the first thing a technical interviewer dismantles.
+const highlights = {
+  display: true,
+  stats: [
+    { value: "22", label: "applications", caption: "reconciled from one git repo" },
+    { value: "19", label: "services", caption: "inventoried, with what is NOT covered" },
+    { value: "3", label: "systems", caption: "behind one login" },
+    { value: "12", label: "decisions", caption: "written down, with what was rejected" },
+  ],
+};
+
 // Open Source Section
 const openSource = {
   showGithubProfile: "true",
@@ -282,6 +298,7 @@ export {
   workExperiences,
   openSource,
   bigProjects,
+  highlights,
   achievementSection,
   contactInfo,
   isHireable,

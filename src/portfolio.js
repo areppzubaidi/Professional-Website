@@ -31,8 +31,15 @@ const greeting = {
       "single sign-on across three systems, secrets sealed in git, and a disaster recovery procedure I have " +
       "actually tested. I learn by breaking things on purpose, then writing down what broke. 🛠️"
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
+  // DISABLED 2026-11-04. Two separate problems were hiding here:
+  //   1. this Drive URL is dead -- all three URL forms return 404, the same response an invalid id gets
+  //   2. the Greeting component never used this value anyway; it does require("./resume.pdf"), and that
+  //      file is the TEMPLATE's placeholder -- opening it shows a page that reads "Sample resume…"
+  // A button that hands a recruiter a placeholder is worse than no button, so it is hidden.
+  //
+  // TO RE-ENABLE: put your real one-page PDF at src/containers/greeting/resume.pdf, then set the line
+  // below to any truthy value (e.g. "resume.pdf") and resumeSection.display back to true.
+  resumeLink: null,
   displayGreeting: true,
 };
 
@@ -270,7 +277,8 @@ const achievementSection = {
 const resumeSection = {
   title: "Resume",
   subtitle: "One page, or ask me for the long version",
-  display: true,
+  // hidden for the same reason as greeting.resumeLink: the bundled PDF is the template's placeholder
+  display: false,
 };
 
 // Contact Info

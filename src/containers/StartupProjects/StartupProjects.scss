@@ -1,90 +1,98 @@
-@import "../../_globalColor";
+/* Projects section — appended for the rebuild.
+   Self-contained values on purpose: this file must not depend on SCSS variables that other partials
+   may rename. Dark mode is handled by the .dark-mode class the app already toggles. */
 
-.card-image {
-  max-width: 100%;
-  height: auto;
-  width: 250px;
+.project-subtitle {
+  margin-top: -0.6rem;
+  margin-bottom: 2.2rem;
+  opacity: 0.72;
 }
-.card-title {
-  color: $titleColor;
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 700;
-  margin: 15px 0 0 0;
-}
-.card-subtitle {
-  color: $cardSubtitle;
-  font-size: 17px;
-  line-height: 1.5rem;
-}
-.project-card {
+
+.project-list {
   display: flex;
   flex-direction: column;
-  background-color: $lightBackground2;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
-  justify-content: center;
-}
-.project-card-light {
-  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  gap: 1.6rem;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.project-card-dark {
-  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
-}
-
-.project-detail {
-  text-align: center;
-}
-.project-card-light:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
-}
-.project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
-}
-.project-image {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
+.project-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1.4rem;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  transition: transform 160ms ease, border-color 160ms ease;
 }
 
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem 1rem;
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.35);
 }
 
-.project-card-footer span.project-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 4px;
-  display: inline-flex;
-  font-size: 0.75rem;
-  height: 2em;
-  justify-content: center;
-  white-space: nowrap;
-  line-height: 1.5;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0 0.75em;
-  cursor: pointer;
-  transition: 0.2s ease-in;
+.project-index {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.38;
+  padding-top: 0.35rem;
+  min-width: 2.2rem;
 }
 
-@media (max-width: 768px) {
-  .project-subtitle {
-    font-size: 16px;
-    text-align: center;
+.project-body {
+  flex: 1;
+}
+
+.project-name {
+  font-size: 1.16rem;
+  font-weight: 600;
+  margin: 0 0 0.55rem 0;
+  line-height: 1.35;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.86;
+}
+
+.project-links {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+/* dark mode */
+.dark-mode .project-card {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.dark-mode .project-card:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.dark-mode .project-desc {
+  opacity: 0.8;
+}
+
+@media (max-width: 720px) {
+  .project-card {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.2rem;
+  }
+  .project-index {
+    padding-top: 0;
   }
 }

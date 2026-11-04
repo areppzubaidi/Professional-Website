@@ -52,10 +52,39 @@ const socialMediaLinks = {
   display: true,
 };
 
+
+// Activity cards
+//
+// Same idea as the highlight strip: claims that point at something real. Each sentence describes a
+// week, not a skillset -- "operating" says what gets done, where a tool list would say Kubernetes.
+const activities = {
+  display: true,
+  title: "What I spend my days on",
+  subtitle: "Four things, most weeks",
+  cards: [
+    {
+      title: "building",
+      text: "A platform, three applications running on it, and whatever breaks next. Lately it is mostly the last one.",
+    },
+    {
+      title: "operating",
+      text: "Backups that restore rather than backups that exist. Alerts that arrive somewhere. A dashboard that answers whether last night's scan actually ran.",
+    },
+    {
+      title: "documenting",
+      text: "Decision records, runbooks, and a service catalogue that lists what is NOT covered as plainly as what is.",
+    },
+    {
+      title: "learning",
+      text: "Working towards CKA. Everything on this page started as something I did not know how to do.",
+    },
+  ],
+};
+
 // Skills Section
 const skillsSection = {
-  title: "What I spend my days on",
-  subTitle: "PLATFORM ENGINEERING, MOSTLY BY BUILDING ONE AND THEN FIXING WHAT IT BREAKS",
+  title: "The stack I reach for",
+  subTitle: "GROUPED BY WHAT EACH TOOL IS FOR, MOSTLY BY BUILDING ONE AND THEN FIXING WHAT IT BREAKS",
   skills: [
     emoji("⚡ Building and operating a K3s platform: GitOps with Argo CD, Helm, backups that restore"),
     emoji("⚡ Making deployments safe: CI gates, admission policy, image scanning, sealed secrets"),
@@ -311,6 +340,7 @@ export {
   openSource,
   bigProjects,
   highlights,
+  activities,
   achievementSection,
   contactInfo,
   isHireable,

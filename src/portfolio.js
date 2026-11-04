@@ -103,13 +103,17 @@ const workExperiences = {
   display: true,
   experience: [
     {
-      // TODO(ariff): your DevOps role is missing here. Add it as the first entry — see the note I
-      // sent. It was left out deliberately rather than guessed: a wrong employer name on a public
-      // page is worse than a missing line.
+      role: "DevOps Engineer",
+      company: "ARRK Engineering",
+      companylogo: require("./assets/images/arrk.png"),
+      date: "August 2026 – Present",
+      desc: "DevOps engineer on the BMW DSA project, responsible for two applications — CSSL and INIS — covering their deployment pipelines, release support and day-to-day operations.",
+    },
+    {
       role: "L2 Engineer",
       company: "Access World",
       companylogo: require("./assets/images/aw.png"),
-      date: "August 2023 – Present",
+      date: "August 2023 – August 2026",
       desc: "Handling Level 2 support, network troubleshooting, and system administration tasks for internal teams and external clients.",
     },
     {

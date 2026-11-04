@@ -28,3 +28,10 @@
 .subTitle {
   color: $subTitle;
 }
+
+/* ACCESSIBILITY — keyboard users need to see where they are, and the header nav means several
+   tab presses before any content. */
+.skip-link { position: absolute; left: -9999px; top: 0; background: #0d1117; color: #fff;
+  padding: 0.7rem 1.1rem; z-index: 9999; border-radius: 0 0 8px 0; font-weight: 600; }
+.skip-link:focus { left: 0; }
+a:focus-visible, button:focus-visible { outline: 3px solid #58a6ff; outline-offset: 3px; border-radius: 4px; }

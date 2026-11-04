@@ -1,0 +1,112 @@
+{
+  "data": {
+    "user": {
+      "pinnedItems": {
+        "edges": [
+          {
+            "node": {
+              "id": "R_1083169038",
+              "name": "portfolio-management-system",
+              "description": "Portfolio Management System with K3s and Jenkins CI/CD",
+              "url": "https://github.com/areppzubaidi/portfolio-management-system",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "diskUsage": 6822
+            }
+          },
+          {
+            "node": {
+              "id": "R_1009997427",
+              "name": "Node.js-App-on-Kubernetes",
+              "description": "Docker + Kubernetes",
+              "url": "https://github.com/areppzubaidi/Node.js-App-on-Kubernetes",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "diskUsage": 4
+            }
+          },
+          {
+            "node": {
+              "id": "R_1160742223",
+              "name": "Creating-ec2-with-Terraform",
+              "description": "No description yet.",
+              "url": "https://github.com/areppzubaidi/Creating-ec2-with-Terraform",
+              "primaryLanguage": {
+                "name": "HCL",
+                "color": "#844FBA"
+              },
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "diskUsage": 1
+            }
+          },
+          {
+            "node": {
+              "id": "R_1083492640",
+              "name": "flask-hello-world-cicd",
+              "description": "No description yet.",
+              "url": "https://github.com/areppzubaidi/flask-hello-world-cicd",
+              "primaryLanguage": {
+                "name": "Dockerfile",
+                "color": "#384d54"
+              },
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "diskUsage": 3
+            }
+          },
+          {
+            "node": {
+              "id": "R_1010435888",
+              "name": "Terraform-Docker-Beginner",
+              "description": "Terraform + Docker",
+              "url": "https://github.com/areppzubaidi/Terraform-Docker-Beginner",
+              "primaryLanguage": {
+                "name": "HCL",
+                "color": "#844FBA"
+              },
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "diskUsage": 6697
+            }
+          },
+          {
+            "node": {
+              "id": "R_1078536538",
+              "name": "hello-k3s",
+              "description": "No description yet.",
+              "url": "https://github.com/areppzubaidi/hello-k3s",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "forkCount": 0,
+              "stargazers": {
+                "totalCount": 0
+              },
+              "diskUsage": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

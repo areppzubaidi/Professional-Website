@@ -1,6 +1,11 @@
 // Personal Portfolio Configuration File
-
-// Global color changes can be made in _globalColor.scss
+//
+// Global colours live in _globalColor.scss.
+//
+// CONTENT RULE FOR THIS FILE: no adjectives that cannot be demonstrated. The previous version opened
+// with "Passionate Cloud DevOps Engineer ... bridging development and operations for seamless,
+// high-performance systems", which is a sentence any candidate can write and therefore distinguishes
+// nobody. Every line below points at something that exists and can be inspected.
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation";
@@ -20,9 +25,11 @@ const splashScreen = {
 // Greeting Section
 const greeting = {
   username: "Nur Ariff",
-  title: "Hi all, I'm Ariff",
+  title: "Hi, I'm Ariff",
   subTitle: emoji(
-    "Passionate Cloud DevOps Engineer | Now transitioning to Cloud DevOps, with a focus on CI/CD pipelines, cloud infrastructure (AWS/GCP/Azure), containerization (Docker/Kubernetes), and IaC (Terraform). Strong background in automation, monitoring, and optimizing deployments—bridging development and operations for seamless, high-performance systems."
+    "DevOps engineer in Malaysia. I run a self-built Kubernetes platform at home — 22 Argo CD applications, " +
+      "single sign-on across three systems, secrets sealed in git, and a disaster recovery procedure I have " +
+      "actually tested. I learn by breaking things on purpose, then writing down what broke. 🛠️"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
@@ -34,29 +41,28 @@ const socialMediaLinks = {
   github: "https://github.com/areppzubaidi",
   linkedin: "https://www.linkedin.com/in/nur-ariff-zubaidi-045785103/",
   gmail: "nurariffbinzubaidi@gmail.com",
-  gitlab: "https://gitlab.com/areppzubaidi", // consider updating if wrong
+  gitlab: "https://gitlab.com/areppzubaidi",
   display: true,
 };
 
 // Skills Section
 const skillsSection = {
-  title: "What I do",
-  subTitle:
-    "PASSIONATE CLOUD & DEVOPS ENGINEER EXPLORING AUTOMATION AND INFRASTRUCTURE AS CODE",
+  title: "What I spend my days on",
+  subTitle: "PLATFORM ENGINEERING, MOSTLY BY BUILDING ONE AND THEN FIXING WHAT IT BREAKS",
   skills: [
-    emoji("⚡ Build and manage scalable cloud infrastructure using AWS, Azure, and Terraform"),
-    emoji("⚡ Automate CI/CD pipelines with tools like GitHub Actions, Jenkins, and GitLab CI"),
-    emoji("⚡ Containerization and orchestration using Docker and Kubernetes"),
+    emoji("⚡ Building and operating a K3s platform: GitOps with Argo CD, Helm, backups that restore"),
+    emoji("⚡ Making deployments safe: CI gates, admission policy, image scanning, sealed secrets"),
+    emoji("⚡ Writing it down — runbooks, ADRs, and a service catalogue nobody asked me to write"),
   ],
   softwareSkills: [
-    { skillName: "aws", fontAwesomeClassname: "fab fa-aws" },
+    { skillName: "kubernetes", fontAwesomeClassname: "fas fa-cubes" },
     { skillName: "linux", fontAwesomeClassname: "fab fa-linux" },
     { skillName: "docker", fontAwesomeClassname: "fab fa-docker" },
-    { skillName: "kubernetes", fontAwesomeClassname: "fas fa-cubes" },
-    { skillName: "jenkins", fontAwesomeClassname: "fas fa-cogs" },
-    { skillName: "ansible", fontAwesomeClassname: "fas fa-terminal" },
-    { skillName: "terraform", fontAwesomeClassname: "fas fa-code-branch" },
     { skillName: "git", fontAwesomeClassname: "fab fa-git-alt" },
+    { skillName: "aws", fontAwesomeClassname: "fab fa-aws" },
+    { skillName: "terraform", fontAwesomeClassname: "fas fa-code-branch" },
+    { skillName: "ansible", fontAwesomeClassname: "fas fa-terminal" },
+    { skillName: "jenkins", fontAwesomeClassname: "fas fa-cogs" },
   ],
   display: true,
 };
@@ -75,8 +81,12 @@ const educationInfo = {
 };
 
 // Tech Stack Experience
+//
+// viewSkillBars is OFF on purpose. A self-assessed "Linux 60%" bar tells a reader nothing (60% of
+// what, measured how?) and it invites the one question it cannot answer. The projects section below
+// shows the same thing with evidence instead.
 const techStack = {
-  viewSkillBars: true,
+  viewSkillBars: false,
   experience: [
     { Stack: "Linux", progressPercentage: "60%" },
     { Stack: "Cloud", progressPercentage: "70%" },
@@ -93,6 +103,9 @@ const workExperiences = {
   display: true,
   experience: [
     {
+      // TODO(ariff): your DevOps role is missing here. Add it as the first entry — see the note I
+      // sent. It was left out deliberately rather than guessed: a wrong employer name on a public
+      // page is worse than a missing line.
       role: "L2 Engineer",
       company: "Access World",
       companylogo: require("./assets/images/aw.png"),
@@ -130,6 +143,84 @@ const workExperiences = {
   ],
 };
 
+// Projects Section
+//
+// This was the missing half of the site: a skills list with no work behind it. Each entry states what
+// the thing is, what was hard about it, and what can be inspected — no tool-name parades.
+const bigProjects = {
+  title: "Things I have built and operated",
+  subtitle: "A homelab platform, three applications on it, and the operational habits that keep them up",
+  projects: [
+    {
+      projectName: "Homelab platform — a miniature production environment",
+      projectDesc:
+        "A three-node K3s cluster on Proxmox, run as GitOps: 22 Argo CD applications reconcile from a " +
+        "single repository, and nothing is deployed by hand. Identity is centralised in Keycloak with " +
+        "group-to-role mapping across Argo CD, Grafana and Headlamp. Credentials are sealed in git, so a " +
+        "rebuild restores its own secrets. Admission policy (Kyverno) refuses privileged containers at the " +
+        "API server. Backups are dumped nightly, and the restore has been rehearsed rather than assumed. " +
+        "Documented as 12 architecture decision records and a service catalogue that states what is NOT " +
+        "covered as clearly as what is.",
+      footerLink: [
+        { name: "Architecture notes", url: "https://github.com/areppzubaidi" },
+      ],
+    },
+    {
+      projectName: "Kita — a family app, run like production",
+      projectDesc:
+        "A household planning and health-recording application used daily by my own family: 42 screens, " +
+        "44 database migrations, three permission roles, and a rule that a child account sees no health " +
+        "data at all. Deployed through staging to production behind a CI gate that refuses to build unless " +
+        "the commit is green. Migrations are additive and never edited once applied, so a rollback of the " +
+        "application never leaves the schema broken.",
+      footerLink: [
+        { name: "Feature inventory", url: "https://github.com/areppzubaidi" },
+      ],
+    },
+    {
+      projectName: "Job-assistant — full-stack app with real deployment discipline",
+      projectDesc:
+        "FastAPI and Next.js on Postgres, built as a second application on the same platform rails so the " +
+        "deployment pattern could be proven twice. Four CI gates (tests, types, lint, build) before an " +
+        "image is published; images tagged by commit SHA so what runs is traceable to what was reviewed; " +
+        "staging proven with smoke assertions before production is touched. Includes an async LLM pipeline " +
+        "for extracting job requirements and generating interview preparation material.",
+      footerLink: [
+        { name: "Repository", url: "https://github.com/areppzubaidi/job-assistant" },
+      ],
+    },
+    {
+      projectName: "Alert pipeline — Prometheus → Kafka → tickets",
+      projectDesc:
+        "Alerts used to be delivered by a single webhook, which meant a receiver outage silently lost " +
+        "them. Now Alertmanager publishes to a Kafka topic and a consumer files a ticket, so an outage " +
+        "delays alerts instead of dropping them, and consumer lag becomes a visible backlog signal. " +
+        "Verified end to end — including watching a real alert go from pending, to firing, to a ticket " +
+        "with the alert's fingerprint in the subject.",
+      footerLink: [
+        { name: "Design notes", url: "https://github.com/areppzubaidi" },
+      ],
+    },
+  ],
+  display: true,
+};
+
+
+// Highlight strip
+//
+// Four numbers, each of which a reader can verify against the platform itself. No invented metrics:
+// no "10x faster", no "99.99% uptime" -- the lab has no measured uptime and claiming one would be
+// the first thing a technical interviewer dismantles.
+const highlights = {
+  display: true,
+  stats: [
+    { value: "22", label: "applications", caption: "reconciled from one git repo" },
+    { value: "19", label: "services", caption: "inventoried, with what is NOT covered" },
+    { value: "3", label: "systems", caption: "behind one login" },
+    { value: "12", label: "decisions", caption: "written down, with what was rejected" },
+  ],
+};
+
 // Open Source Section
 const openSource = {
   showGithubProfile: "true",
@@ -139,20 +230,22 @@ const openSource = {
 // Certifications & Achievements
 const achievementSection = {
   title: emoji("Certifications 🏆"),
-  subtitle: "Achievements, Certifications, Award Letters, and some cool stuff that I have done!",
+  subtitle: "Formal credentials — the projects above are where the practice lives",
   achievementsCards: [
     {
       title: "AWS Certified Cloud Practitioner",
       subtitle:
-        "Earned foundational AWS certification, demonstrating understanding of cloud concepts, AWS services, and architecture best practices.",
+        "Foundational AWS certification: cloud concepts, core services, and architecture best practices.",
       image: awsLogo,
       imageAlt: "AWS Logo",
+      // TODO(ariff): replace with your own Credly badge URL. This currently points at Credly's
+      // homepage, which verifies nothing.
       footerLink: [{ name: "View Certification", url: "https://www.credly.com/" }],
     },
     {
       title: "ITIL v4 Foundation Certified",
       subtitle:
-        "Certified in ITIL v4 Foundation, demonstrating understanding of IT Service Management practices and principles.",
+        "IT service management practices and principles — the vocabulary incident and change management run on.",
       image: itilLogo,
       imageAlt: "ITIL Logo",
       footerLink: [{ name: "View Certification", url: "https://www.credly.com/" }],
@@ -172,20 +265,19 @@ const achievementSection = {
 // Resume Section
 const resumeSection = {
   title: "Resume",
-  subtitle: "Feel free to download my resume",
+  subtitle: "One page, or ask me for the long version",
   display: true,
 };
 
 // Contact Info
 const contactInfo = {
-  title: "Contact",
-  subtitle: "Want to work together or just say hi?",
+  title: "Jom borak.",
+  subtitle: "Happy to talk about platform work, or about what broke in my lab this week",
   number: "+6010-9876406",
   email_address: "nurariffbinzubaidi@gmail.com",
   openForOpportunities: "Yes",
   display: true,
 };
-
 
 // Illustration config
 const illustration = {
@@ -205,6 +297,8 @@ export {
   techStack,
   workExperiences,
   openSource,
+  bigProjects,
+  highlights,
   achievementSection,
   contactInfo,
   isHireable,

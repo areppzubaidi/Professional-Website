@@ -1,0 +1,64 @@
+/* Stat strip under the greeting. Self-contained values — no dependency on shared SCSS variables. */
+
+.highlights-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  max-width: 980px;
+  margin: 0 auto 2.5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.highlight {
+  padding: 1.1rem 0.8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.highlight-value {
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.highlight-label {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.highlight-caption {
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  opacity: 0.55;
+}
+
+/* dark mode */
+.dark-mode .highlight {
+  border-top-color: rgba(255, 255, 255, 0.22);
+}
+
+.dark-mode .highlight-label {
+  opacity: 0.8;
+}
+
+.dark-mode .highlight-caption {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .highlights-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-value {
+    font-size: 1.7rem;
+  }
+}
